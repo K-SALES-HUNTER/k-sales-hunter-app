@@ -1,18 +1,31 @@
 {
   "expo": {
-    "name": "k-sales-hunter-app",
+    "name": "케세헌",
     "slug": "k-sales-hunter-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "ksaleshunterapp",
+    "scheme": "ksaleshunter",
     "userInterfaceStyle": "automatic",
+    "primaryColor": "#19336E",
     "ios": {
-      "icon": "./assets/expo.icon"
+      "bundleIdentifier": "com.ksaleshunter.admin",
+      "buildNumber": "1",
+      "supportsTablet": false,
+      "config": {
+        "usesNonExemptEncryption": false
+      },
+      "infoPlist": {
+        "CFBundleDisplayName": "케세헌",
+        "CFBundleLocalizations": ["ko"],
+        "CFBundleDevelopmentRegion": "ko"
+      }
     },
     "android": {
+      "package": "com.ksaleshunter.admin",
+      "versionCode": 1,
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#19336E",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
         "backgroundImage": "./assets/images/android-icon-background.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
@@ -28,9 +41,26 @@
       [
         "expo-splash-screen",
         {
-          "backgroundColor": "#208AEF",
+          "backgroundColor": "#19336E",
           "image": "./assets/images/splash-icon.png",
-          "imageWidth": 76
+          "imageWidth": 120,
+          "resizeMode": "contain",
+          "dark": {
+            "backgroundColor": "#0E1420"
+          }
+        }
+      ],
+      "expo-sqlite",
+      "expo-secure-store",
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/Pretendard-Regular.otf",
+            "./assets/fonts/Pretendard-Medium.otf",
+            "./assets/fonts/Pretendard-SemiBold.otf",
+            "./assets/fonts/Pretendard-Bold.otf"
+          ]
         }
       ]
     ],
