@@ -17,7 +17,9 @@
       },
       "infoPlist": {
         "CFBundleDisplayName": "케세헌",
-        "CFBundleLocalizations": ["ko"],
+        "CFBundleLocalizations": [
+          "ko"
+        ],
         "CFBundleDevelopmentRegion": "ko"
       }
     },
@@ -67,6 +69,19 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "cc2f428a-d6f1-4888-bfa2-69128760c711"
+      }
+    },
+    "owner": "nicerjs23",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/cc2f428a-d6f1-4888-bfa2-69128760c711"
     }
   }
 }
