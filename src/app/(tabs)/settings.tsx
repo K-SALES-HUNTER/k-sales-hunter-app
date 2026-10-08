@@ -1,12 +1,13 @@
 import { Ionicons } from '@expo/vector-icons';
 import Constants from 'expo-constants';
 import type { ReactNode } from 'react';
-import { Alert, Platform, Pressable, StyleSheet, Switch, View } from 'react-native';
+import { Alert, Linking, Platform, Pressable, StyleSheet, Switch, View } from 'react-native';
 
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Screen } from '@/components/ui/screen';
 import { AppText } from '@/components/ui/text';
+import { ACKNOWLEDGEMENT, Links } from '@/constants/links';
 import { Radius, Spacing } from '@/constants/theme';
 import { useHaptics } from '@/hooks/use-haptics';
 import { useTheme } from '@/hooks/use-theme';
@@ -112,8 +113,15 @@ export default function SettingsScreen() {
           </AppText>
         </Row>
         <Divider />
+        <LinkRow label="개인정보 처리방침" url={Links.privacy} />
+        <Divider />
+        <LinkRow label="고객 지원" url={Links.support} />
+        <Divider />
         <AppText variant="caption01" tone="secondary" style={styles.caption}>
           케세헌 앱은 판매 현황 조회용이에요. 상품 등록·분석 보고서·판매 관리는 PC 웹에서 이용해주세요.
+        </AppText>
+        <AppText variant="caption01" tone="muted" style={styles.caption}>
+          {ACKNOWLEDGEMENT}
         </AppText>
       </Section>
 
@@ -139,6 +147,21 @@ function Row({ label, children }: { label: string; children: ReactNode }) {
       <AppText variant="body01">{label}</AppText>
       {children}
     </View>
+  );
+}
+
+function LinkRow({ label, url }: { label: string; url: string }) {
+  const theme = useTheme();
+  return (
+    <Pressable
+      accessibilityRole="link"
+      onPress={() => Linking.openURL(url)}
+      style={({ pressed }) => pressed && { opacity: 0.6 }}
+    >
+      <Row label={label}>
+        <Ionicons name="open-outline" size={18} color={theme.textSecondary} />
+      </Row>
+    </Pressable>
   );
 }
 
