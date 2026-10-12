@@ -28,7 +28,7 @@ export const recentProductsMock: RecentProduct[] = [
   {
     id: 1,
     name: '제주 화산송이 클렌저 150ml',
-    image: require('@/assets/images/products/travel-mug.png'),
+    image: require('@/assets/images/products/travel-mug.jpg'),
     revenue: null,
     registeredAt: '2026-06-20',
     reportCountries: COUNTRIES,
@@ -36,7 +36,7 @@ export const recentProductsMock: RecentProduct[] = [
   {
     id: 2,
     name: '한류 스타 포토카드 패키지',
-    image: require('@/assets/images/products/eco-tote.png'),
+    image: require('@/assets/images/products/eco-tote.jpg'),
     revenue: 15000,
     registeredAt: '2026-06-20',
     reportCountries: COUNTRIES,
@@ -44,7 +44,7 @@ export const recentProductsMock: RecentProduct[] = [
   {
     id: 3,
     name: '서울 컬렉션 헤어미스트',
-    image: require('@/assets/images/products/lip-tint.png'),
+    image: require('@/assets/images/products/lip-tint.jpg'),
     revenue: 6000,
     registeredAt: '2026-06-20',
     reportCountries: COUNTRIES,
@@ -52,7 +52,7 @@ export const recentProductsMock: RecentProduct[] = [
   {
     id: 4,
     name: '비건 립틴트 4종 세트',
-    image: require('@/assets/images/products/led-strip.png'),
+    image: require('@/assets/images/products/led-strip.jpg'),
     revenue: null,
     registeredAt: '2026-06-20',
     reportCountries: COUNTRIES,
