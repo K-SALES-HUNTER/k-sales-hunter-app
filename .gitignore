@@ -49,3 +49,8 @@ example
 .claude/
 CLAUDE.md
 AGENTS.md
+
+# store build artifacts
+*.aab
+*.apk
+*.ipa
